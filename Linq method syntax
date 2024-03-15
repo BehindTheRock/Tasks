@@ -17,12 +17,15 @@ public class Program
             };
 
         // upit i izvršavanje upita
-        var result = studentList.Where(Student => Student.StudentName.Contains('n'));
+        var result = studentList.Where(s => s.StudentName.Contains('n'));
 
-        foreach (var rez in result)
+
+        foreach (var stu in result)
         {
-            Console.WriteLine(rez);
+            Console.WriteLine(stu.StudentName);
         }
+
+        Console.ReadKey();
 
 
     }
